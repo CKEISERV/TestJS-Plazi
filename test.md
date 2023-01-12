@@ -37,3 +37,40 @@ let completeName = nombre + " " + apellido;
 
 b. Dinero Real ->
 let dineroReal = dineroAhorrado - deudas;
+
+## Funciones
+
+## 1. Responde las siguientes preguntas
+
+a. Que es una función -> Una función es un conjunto de acciones que nos devuelve un resultado. Nos permite guardar bloques de codigo para reutilizarlos y ejecutarlos en el futuro
+
+b. Cuando me sirve usar una función en mi codigo? -> Cuando tenemos codigo repetido. Igualmente cuando el codigo es bastante extenso, se encapsula parte del codigo que tenga relación para una mejor comprensión del codigo
+
+c. Cual es la diferencia entre parametros y argumentos de una función? -> Los parametros son los recibidos por la función cuando son declaradas. Los argumentos son los enviados cuando las funciones son ejecutadas
+
+## 2. Convierte el siguiente codigo en una función, pero cambiando cuando sea necesario las variables constantes por parametros y argumentos en una funcion
+
+a.
+
+const name = "Juan David";
+const lastname = "Castro Gallego";
+const completeName = name + lastname;
+const nickname = "juandc";
+
+console.log("Mi nombre es " + completeName + ", pero prefiero que me digas " + nickname + ".");
+
+-->
+
+let name = "cesar";
+let lastname = "villamizar";
+let nickname = "ckeiserv";
+
+function nombre(name,lastname,nickname){
+
+    var completename = name + " " + lastname;
+
+    return console.log("Mi nombre es " + completename + ",Pero prefiero que me digas " + nickname);
+
+}
+
+nombre(name,lastname,nickname);
