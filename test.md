@@ -178,3 +178,131 @@ respuesta = parseInt(pregunta);
 }
 
 console.log("Felicitaciones");
+
+## Listas
+
+## 1. Responde las siguientes preguntas
+
+a. Que es un array --> Es una lista de elementos
+
+b. Que es un objeto --> Es una lista de elementos pero cada elemento tiene un nombre clave
+
+c. Cuando es mejor usar objetos o arrays --> Arrays cuando lo que haremos en un elemento es lo mismo que en todos los demas. Mientras que en un objeto cuando los nombres de cada elemento son importantes para nuestro algoritmo
+
+d. Puedo mezclar arrays con objetos o incluso objetos con arrays? --> si se puede
+
+## 2. Crea una función que pueda recibir cualquier array como parámetro e imprima su primer elemento.
+
+let primerElemento = [0,1,2,3,4,5]
+
+function imprimir(primerElemento){
+
+    console.log(primerElemento[0]);
+
+}
+
+imprimir(primerElementor);
+
+## 3. Crea una función que pueda recibir cualquier array como parámetro e imprima todos sus elementos uno por uno (no se vale imprimir el array completo).
+
+let todosLosElementos = [1,2,3];
+
+function imprimirTodos(elementos){
+
+    for(let i = 0; i< elementos.length; i++){
+        console.log(elementos[i])
+    }
+
+}
+
+imprimirTodos(todosLosElementos);
+
+## 4. Crea una función que pueda recibir cualquier objeto como parámetro e imprima todos sus elementos uno por uno (no se vale imprimir el objeto completo).
+
+let todoslosElementos = {
+
+    nombre: "Cesar",
+    apellido: "Villamizar",
+    edad: 24
+
+}
+
+function imprimirTodos(elementos){
+let elementosArray = Object.values(elementos);
+
+        for(let i = 0; i< elementosArray.length; i++){
+        console.log(elementosArray[i])
+    }
+
+}
+
+imprimirTodos(todoslosElementos)
+
+## Bonus
+
+## Replica el comportamiento de tu condicional anterior con if, else y else if, pero ahora solo con if (sin else ni else if).
+
+const tipoDeSuscripcion = "Basic";
+
+switch (tipoDeSuscripcion) {
+case "Free":
+console.log("Solo puedes tomar los cursos gratis");
+break;
+case "Basic":
+console.log("Puedes tomar casi todos los cursos de Platzi durante un mes");
+break;
+case "Expert":
+console.log("Puedes tomar casi todos los cursos de Platzi durante un año");
+break;
+case "ExpertPlus":
+console.log("Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año");
+break;
+}
+
+-->
+
+function tipoDeSuscripción(subscripción){
+if(subscripción === "Free"){
+console.log("Solo puedes tomar los cursos gratis");
+return;
+}
+
+if(subscripción === "Basic"){
+console.log("Puedes tomar casi todos los cursos de Platzi durante un mes");
+return;
+}
+
+if(subscripción === "Expert"){
+console.log("Puedes tomar casi todos los cursos de Platzi durante un año");
+return;
+}
+
+if(subscripción === "ExpertPlus"){
+console.log("Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año");
+return;
+}
+
+console.log("No existe el tipo de subscripción")
+}
+
+## Replicar este comportamiento con arrays u objetos y un solo condicional.
+
+const userSucription = "Basic";
+
+let typeSuscription = [
+"Free",
+"Basic",
+"Expert",
+"ExpertPlus" ];
+
+let infoSuscription = [
+"solo puedes tomar los cursos gratis",
+"puedes tomar casi todos los cursos de Platzi durante un mes",
+"puedes tomar casi todos los cursos de Platzi durante un año",
+"tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año"];
+
+    for(let i = 0; i<=typeSuscription.length; i++){
+        if(userSucription === typeSuscription[i]){
+            console.log(`Su susbcripcion es ${typeSuscription[i]} por lo tanto ${infoSuscription[i]}`)
+        }
+    }
