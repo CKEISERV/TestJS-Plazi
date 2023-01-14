@@ -120,3 +120,61 @@ console.log("Puedes tomar casi todos los cursos de Platzi durante un año");
 }else if(tipoDeSuscripción === "ExpertPlus"){
 console.log("Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año");
 }
+
+## Ciclos
+
+## 1. Responde las siguientes preguntas
+
+a. Que es un ciclo? -> Es un bloque de codigo que ejecuta una determinada acción hasta que se cumpla la condición dada
+
+b. Que te tipos de ciclos existen en JavaScript? -> for, while y do while
+
+c. Que es un ciclo infinito y porque es un problema? -> Un ciclo infinito es cuando no hay una acción que interrumpa su ejecución, con ello el resto del codigo no va a compilar y se termina dañando la ejecución
+
+d. Puedo mezclar ciclos y condicionales? Si se puede
+
+## 2. Replica el comportamiento de los siguientes ciclos for utilizando ciclos while:
+
+a. for (let i = 0; i < 5; i++) {
+console.log("El valor de i es: " + i);
+}
+
+for (let i = 10; i >= 2; i--) {
+console.log("El valor de i es: " + i);
+}
+
+-->
+
+let i = 0;
+
+while(i < 5){
+console.log("El valor de i es " + i);
+i++;
+}
+
+let i = 10
+
+while(i>=2){
+console.log("El valor de i es: " + i);
+i--;
+}
+
+## 3. Escribe un código en JavaScript que le pregunte a los usuarios cuánto es 2 + 2. Si responden bien, mostramos un mensaje de felicitaciones, pero si responden mal, volvemos a empezar
+
+let resultado = 4;
+
+let pregunta = prompt("Cuanto es el resultado de 2 + 2");
+
+let respuesta = parseInt(pregunta);
+
+while(resultado != respuesta){
+
+console.log("volvamos a empezar");
+
+pregunta = prompt("Cuanto es el resultado de 2 + 2");
+
+respuesta = parseInt(pregunta);
+
+}
+
+console.log("Felicitaciones");
